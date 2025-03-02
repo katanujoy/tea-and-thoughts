@@ -1,0 +1,21 @@
+{
+  "name": "github-pages-project",
+  "version": "1.0.0",
+  "description": "Tea & Thoughts - A wellness website designed to help you relax, reflect, and grow.",
+  "main": "script.js",
+  "scripts": {
+    "start": "live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "wellness",
+    "tea",
+    "mindfulness",
+    "self-care"
+  ],
+  "author": "Katanu Joy",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.0"
+  }
+}

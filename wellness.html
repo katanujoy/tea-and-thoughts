@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wellness - Tea & Thoughts</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <style>
+      body {
+        background-color: #f5e1c8; /* Beige background */
+        color: #4a3f35; /* Deep brown text */
+        font-family: "Georgia", serif;
+        text-align: center;
+      }
+      .activity-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin: 20px 0;
+      }
+      .activity {
+        background: #ded0b6;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        flex: 1 1 30%;
+        max-width: 300px;
+      }
+      video {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+      .activity a {
+        display: block;
+        margin-top: 10px;
+        padding: 10px;
+        background: #6b4226; /* Deep brown */
+        color: white;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+      }
+      .activity a:hover {
+        background: #8c5a3b;
+      }
+      .nav-container {
+        background: #6b4226;
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+      }
+      .nav-container h1 {
+        color: #f5e1c8;
+        font-size: 24px;
+      }
+      .nav-container ul {
+        list-style: none;
+        display: flex;
+        gap: 15px;
+      }
+      .nav-container ul li {
+        display: inline;
+      }
+      .nav-container ul li a {
+        color: #f5e1c8;
+        text-decoration: none;
+        padding: 8px 12px;
+        border-radius: 5px;
+        transition: background 0.3s;
+      }
+      .nav-container ul li a:hover,
+      .nav-container ul li a.active {
+        background: #8c5a3b;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="nav-container">
+      <h1>Tea & Thoughts</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="mood.html">Mood Teas</a></li>
+        <li><a href="wellness.html" class="active">Wellness</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Wellness Page -->
+    <section id="wellness-activities">
+      <h2>Wellness</h2>
+      <div class="activity-container">
+        <div class="activity">
+          <video autoplay loop muted>
+            <source
+              src="https://videos.pexels.com/video-files/3209148/3209148-uhd_2560_1440_25fps.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <a href="https://www.headspace.com/meditation" target="_blank"
+            >Meditation</a
+          >
+        </div>
+        <div class="activity">
+          <video autoplay loop muted>
+            <source
+              src="https://videos.pexels.com/video-files/4352398/4352398-sd_640_360_25fps.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <a href="https://www.youtube.com/watch?v=tEmt1Znux58" target="_blank"
+            >Breathing Exercises</a
+          >
+        </div>
+        <div class="activity">
+          <video autoplay loop muted>
+            <source
+              src="https://videos.pexels.com/video-files/3327752/3327752-sd_640_360_24fps.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <a href="https://www.youtube.com/watch?v=4pKly2JojMw" target="_blank"
+            >Yoga</a
+          >
+        </div>
+      </div>
+
+      <div class="activity-container">
+        <div class="activity">
+          <video autoplay loop muted>
+            <source
+              src="https://videos.pexels.com/video-files/4426509/4426509-sd_640_360_25fps.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <a
+            href="https://www.mind.org.uk/information-support/tips-for-everyday-living/self-care/"
+            target="_blank"
+            >Self-Care</a
+          >
+        </div>
+        <div class="activity">
+          <video autoplay loop muted>
+            <source
+              src="https://videos.pexels.com/video-files/4957760/4957760-hd_1920_1080_25fps.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <a href="https://www.youtube.com/watch?v=ZToicYcHIOU" target="_blank"
+            >Mindfulness Practices</a
+          >
+        </div>
+        <div class="activity">
+          <video autoplay loop muted>
+            <source
+              src="https://videos.pexels.com/video-files/7202857/7202857-sd_640_360_25fps.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <a href="https://www.mindful.org/daily-affirmations/" target="_blank"
+            >Daily Affirmations</a
+          >
+        </div>
+      </div>
+
+      <div class="activity-container">
+        <div class="activity">
+          <video autoplay loop muted>
+            <source
+              src="https://videos.pexels.com/video-files/4596337/4596337-sd_640_360_25fps.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <a href=" https://positivepsychology.com/benefits-of-journaling/"
+            >Sip & Journal</a
+          >
+        </div>
+        <div class="activity">
+          <video autoplay loop muted>
+            <source
+              src="https://videos.pexels.com/video-files/3568312/3568312-sd_640_360_24fps.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <a
+            href="https://www.artoftea.com/blogs/tea-101/tea-rituals-around-the-world"
+            target="_blank"
+            >Tea Rituals</a
+          >
+        </div>
+        <div class="activity">
+          <video autoplay loop muted>
+            <source
+              src="https://videos.pexels.com/video-files/853767/853767-sd_640_360_25fps.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <a
+            href="https://open.spotify.com/playlist/4y3g74yXc0Kr4huyUY876w?si=10f55b883d274a03"
+            target="_blank"
+            >Music Therapy</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Tea & Thoughts | Sip. Reflect. Grow.</p>
+    </footer>
+  </body>
+</html>
