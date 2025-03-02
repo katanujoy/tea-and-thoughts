@@ -45,6 +45,11 @@ Welcome to Tea & Thoughts, a wellness website designed to help you relax, reflec
 - Node.js & npm
 - Live Server for local development
 
+## Optimal Screen Resolution
+- **Recommended Resolution:** **1280px × 720px and above (HD and higher)**
+- **Fully Responsive Range:** **360px × 640px (mobile) to 1920px × 1080px (full HD desktop)**
+- **Best Experience:** **1366px × 768px (common laptop resolution)**
+
 ## Setup Instructions
 ### Prerequisites
 - **Node.js & npm** (Download from [nodejs.org](https://nodejs.org/))
