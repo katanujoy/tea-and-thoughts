@@ -6,51 +6,33 @@
     <title>About Me - Tea & Thoughts</title>
     <link rel="stylesheet" href="styles.css" />
     <style>
+      :root {
+        --lavender: #e6e6fa;
+        --light-lavender: #f4f4ff;
+        --pastel-purple: #d8bfd8;
+        --warm-lavender: #c9b1d6;
+        --deep-lavender: #9370db;
+        --text-color: #5d4a66;
+        --light-text: #7a6a84;
+      }
+      
       body {
-        background-color: #f5e1c8; /* Beige background */
-        color: #4a3f35; /* Deep brown text */
+        background-color: var(--light-lavender);
+        color: var(--text-color);
         font-family: "Georgia", serif;
         text-align: center;
-        position: relative;
-      }
-      body::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(
-          128,
-          100,
-          60,
-          0.5
-        ); /* Olive-brown aesthetic with 50% opacity */
-        z-index: -1;
-      }
-      #about {
-        text-align: center;
-        max-width: 800px;
-        margin: 50px auto;
-        padding: 20px;
-        background: rgba(255, 248, 220, 0.8); /* Beige aesthetic */
-        border-radius: 10px;
-      }
-      .profile-container {
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        min-height: 100vh;
         display: flex;
-        justify-content: center;
-        margin-bottom: 20px;
+        flex-direction: column;
       }
-      .profile-picture {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid #6b4226;
-      }
+      
+      /* Navigation Bar */
       .nav-container {
-        background: #6b4226;
-        padding: 15px;
+        background: var(--deep-lavender);
+        padding: 15px 20px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -58,35 +40,299 @@
         top: 0;
         z-index: 1000;
         width: 100%;
+        box-sizing: border-box;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
       }
+      
       .nav-container h1 {
-        color: #f5e1c8;
+        color: white;
         font-size: 24px;
+        font-weight: 600;
+        margin: 0;
       }
+      
       .nav-container ul {
         list-style: none;
         display: flex;
         gap: 15px;
+        margin: 0;
+        padding: 0;
       }
+      
       .nav-container ul li {
         display: inline;
       }
+      
       .nav-container ul li a {
-        color: #f5e1c8;
+        color: white;
         text-decoration: none;
         padding: 8px 12px;
-        border-radius: 5px;
-        transition: background 0.3s;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        font-weight: 500;
       }
+      
       .nav-container ul li a:hover,
       .nav-container ul li a.active {
-        background: #8c5a3b;
+        background: rgba(255, 255, 255, 0.2);
+        transform: translateY(-2px);
       }
-      footer {
-        background: #6b4226;
-        color: #f5e1c8;
+      
+      /* Mobile Navigation */
+      .menu-toggle {
+        display: none;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+      }
+      
+      /* About Header */
+      .about-header {
+        padding: 50px 20px;
+        background: linear-gradient(135deg, var(--lavender), var(--pastel-purple));
+        margin-bottom: 40px;
+      }
+      
+      .profile-container {
+        margin-bottom: 20px;
+      }
+      
+      .profile-picture {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid var(--pastel-purple);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+      
+      .about-header h2 {
+        font-size: 36px;
+        color: var(--deep-lavender);
+        margin-bottom: 15px;
+      }
+      
+      .about-header p {
+        font-size: 18px;
+        max-width: 700px;
+        margin: 0 auto;
+        color: var(--text-color);
+      }
+      
+      /* About Content */
+      #about {
+        max-width: 800px;
+        margin: 0 auto 50px;
+        padding: 0 20px;
+        text-align: left;
+      }
+      
+      .about-section {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+        border-top: 4px solid var(--pastel-purple);
+        transition: all 0.3s ease;
+      }
+      
+      .about-section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      
+      .about-section h3 {
+        font-size: 24px;
+        color: var(--deep-lavender);
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      
+      .about-section p {
+        font-size: 16px;
+        color: var(--text-color);
+        margin-bottom: 15px;
+      }
+      
+      .fun-facts {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        margin-bottom: 30px;
+        border-top: 4px solid var(--pastel-purple);
+      }
+      
+      .fun-facts h3 {
+        font-size: 24px;
+        color: var(--deep-lavender);
+        margin-bottom: 20px;
+        text-align: center;
+      }
+      
+      .fun-facts ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      
+      .fun-facts li {
         padding: 15px;
-        margin-top: 20px;
+        margin-bottom: 15px;
+        background: rgba(248, 247, 255, 0.5);
+        border-radius: 10px;
+        border-left: 4px solid var(--warm-lavender);
+        transition: all 0.3s ease;
+      }
+      
+      .fun-facts li:hover {
+        background: white;
+        transform: translateX(5px);
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      }
+      
+      .fun-facts strong {
+        color: var(--deep-lavender);
+      }
+      
+      .connect-section {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        border-top: 4px solid var(--pastel-purple);
+      }
+      
+      .connect-section p {
+        font-size: 16px;
+        color: var(--text-color);
+        margin-bottom: 20px;
+      }
+      
+      .contact-link {
+        display: inline-block;
+        padding: 12px 25px;
+        background: var(--deep-lavender);
+        color: white;
+        text-decoration: none;
+        border-radius: 30px;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(147, 112, 219, 0.3);
+      }
+      
+      .contact-link:hover {
+        background: var(--warm-lavender);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(147, 112, 219, 0.4);
+      }
+      
+      /* Footer */
+      footer {
+        background: var(--deep-lavender);
+        color: white;
+        padding: 25px 15px;
+        margin-top: auto;
+      }
+      
+      footer p {
+        margin: 0;
+        font-size: 16px;
+      }
+      
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        .nav-container {
+          flex-direction: column;
+          padding: 15px;
+        }
+        
+        .nav-container h1 {
+          margin-bottom: 15px;
+        }
+        
+        .menu-toggle {
+          display: block;
+          position: absolute;
+          top: 15px;
+          right: 20px;
+        }
+        
+        .nav-container ul {
+          flex-direction: column;
+          width: 100%;
+          display: none;
+        }
+        
+        .nav-container ul.show {
+          display: flex;
+        }
+        
+        .nav-container ul li {
+          margin: 5px 0;
+        }
+        
+        .nav-container ul li a {
+          display: block;
+          padding: 10px;
+          border-radius: 5px;
+        }
+        
+        .about-header {
+          padding: 30px 15px;
+        }
+        
+        .about-header h2 {
+          font-size: 30px;
+        }
+        
+        .about-header p {
+          font-size: 16px;
+        }
+        
+        .profile-picture {
+          width: 150px;
+          height: 150px;
+        }
+        
+        #about {
+          padding: 0 15px;
+        }
+        
+        .about-section,
+        .fun-facts,
+        .connect-section {
+          padding: 25px 20px;
+        }
+        
+        .about-section h3,
+        .fun-facts h3 {
+          font-size: 22px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .nav-container h1 {
+          font-size: 20px;
+        }
+        
+        .about-header h2 {
+          font-size: 26px;
+        }
+        
+        .profile-picture {
+          width: 130px;
+          height: 130px;
+        }
+        
+        .about-section h3,
+        .fun-facts h3 {
+          font-size: 20px;
+        }
       }
     </style>
   </head>
@@ -94,7 +340,8 @@
     <!-- Navigation Bar -->
     <nav class="nav-container">
       <h1>Tea & Thoughts</h1>
-      <ul>
+      <button class="menu-toggle">☰</button>
+      <ul id="nav-menu">
         <li><a href="index.html">Home</a></li>
         <li><a href="mood.html">Mood Teas</a></li>
         <li><a href="wellness.html">Wellness</a></li>
@@ -103,8 +350,8 @@
       </ul>
     </nav>
 
-    <!-- About Section -->
-    <section id="about">
+    <!-- About Header -->
+    <section class="about-header">
       <div class="profile-container">
         <img
           src="images/profile.jpg"
@@ -116,104 +363,142 @@
       <p>
         Welcome to <strong>Tea & Thoughts</strong>, my little corner of the
         internet where I share my love for tea, mindfulness, and personal
-        growth. This space is more than just a website—it’s a reflection of my
-        journey, my passions, and my desire to create a community where we can
-        all find peace and inspiration.
+        growth.
       </p>
+    </section>
 
-      <h3>My Story 🌿</h3>
-      <p>
-        Growing up in Kenya, tea was always a big part of my life. From the
-        early morning chai shared with family to the quiet moments spent sipping
-        tea while watching the sunset, it became a symbol of warmth, connection,
-        and reflection.
-      </p>
-      <p>
-        Life hasn’t always been easy. There were times when I felt overwhelmed,
-        lost, and disconnected from myself. During those moments, I turned to
-        tea and mindfulness practices as a way to heal and find clarity. That’s
-        how <strong>Tea & Thoughts</strong> was born—a space to share what I’ve
-        learned and to help others find their own moments of peace.
-      </p>
+    <!-- About Content -->
+    <section id="about">
+      <div class="about-section">
+        <h3>My Story 🌿</h3>
+        <p>
+          Growing up in Kenya, tea was always a big part of my life. From the
+          early morning chai shared with family to the quiet moments spent sipping
+          tea while watching the sunset, it became a symbol of warmth, connection,
+          and reflection.
+        </p>
+        <p>
+          Life hasn't always been easy. There were times when I felt overwhelmed,
+          lost, and disconnected from myself. During those moments, I turned to
+          tea and mindfulness practices as a way to heal and find clarity. That's
+          how <strong>Tea & Thoughts</strong> was born—a space to share what I've
+          learned and to help others find their own moments of peace.
+        </p>
+      </div>
 
-      <h3>Why Tea? 🍵</h3>
-      <p>
-        For me, tea is more than just a drink, it’s a ritual. It’s about slowing
-        down, being present, and savoring the moment. My absolute favorite tea
-        is <strong>hibiscus</strong>. Its vibrant color and tangy flavor always
-        brighten my day, and I love how it’s packed with antioxidants. Whether
-        it’s a hot cup on a rainy day or a chilled glass in the summer, hibiscus
-        tea is my go-to.
-      </p>
-      <p>
-        Tea also has a unique way of bringing people together. Some of my most
-        meaningful conversations have happened over a shared pot of tea. It’s a
-        universal language of comfort and connection.
-      </p>
+      <div class="about-section">
+        <h3>Why Tea? 🍵</h3>
+        <p>
+          For me, tea is more than just a drink, it's a ritual. It's about slowing
+          down, being present, and savoring the moment. My absolute favorite tea
+          is <strong>hibiscus</strong>. Its vibrant color and tangy flavor always
+          brighten my day, and I love how it's packed with antioxidants. Whether
+          it's a hot cup on a rainy day or a chilled glass in the summer, hibiscus
+          tea is my go-to.
+        </p>
+        <p>
+          Tea also has a unique way of bringing people together. Some of my most
+          meaningful conversations have happened over a shared pot of tea. It's a
+          universal language of comfort and connection.
+        </p>
+      </div>
 
-      <h3>The Power of Mindfulness 🧘‍♀️</h3>
-      <p>
-        Mindfulness has been a game-changer for me. It’s not about eliminating
-        stress or avoiding challenges, it’s about learning to navigate life with
-        grace and intention. Through meditation, journaling, and mindful
-        breathing, I’ve discovered how to create moments of calm even in the
-        busiest of days.
-      </p>
-      <p>
-        On this website, I share some of the practices that have helped me, from
-        guided meditations to journaling prompts. My hope is that they’ll
-        inspire you to create your own mindfulness rituals.
-      </p>
+      <div class="about-section">
+        <h3>The Power of Mindfulness 🧘‍♀️</h3>
+        <p>
+          Mindfulness has been a game-changer for me. It's not about eliminating
+          stress or avoiding challenges, it's about learning to navigate life with
+          grace and intention. Through meditation, journaling, and mindful
+          breathing, I've discovered how to create moments of calm even in the
+          busiest of days.
+        </p>
+        <p>
+          On this website, I share some of the practices that have helped me, from
+          guided meditations to journaling prompts. My hope is that they'll
+          inspire you to create your own mindfulness rituals.
+        </p>
+      </div>
 
-      <h3>A Community of Growth 🌱</h3>
-      <p>
-        What started as a personal project has grown into a beautiful community.
-        I’m constantly inspired by the stories and experiences shared by people
-        who visit <strong>Tea & Thoughts</strong>. Together, we’re creating a
-        space where we can sip, reflect, and grow.
-      </p>
-      <p>
-        Thank you for being here. Whether you’re here for the tea, the
-        mindfulness tips, or just to take a moment for yourself, I’m so glad
-        you’re part of this journey.
-      </p>
+      <div class="about-section">
+        <h3>A Community of Growth 🌱</h3>
+        <p>
+          What started as a personal project has grown into a beautiful community.
+          I'm constantly inspired by the stories and experiences shared by people
+          who visit <strong>Tea & Thoughts</strong>. Together, we're creating a
+          space where we can sip, reflect, and grow.
+        </p>
+        <p>
+          Thank you for being here. Whether you're here for the tea, the
+          mindfulness tips, or just to take a moment for yourself, I'm so glad
+          you're part of this journey.
+        </p>
+      </div>
 
-      <h3>Fun Facts About Me 🌸</h3>
-      <ul style="list-style: none; padding: 0">
-        <li>
-          ✨ My favorite tea is <strong>hibiscus</strong>,it’s tangy,
-          refreshing, and always puts me in a good mood.
-        </li>
-        <li>
-          ✨ I’m a huge bookworm and always have a novel on my nightstand. Give
-          me a cozy blanket, a cup of tea, and a good book, and I’m in heaven.
-        </li>
-        <li>
-          ✨ I’m a homebody at heart. While some people love the outdoors, I
-          find my peace indoors,ALONE, surrounded by soft lighting, calming
-          music, and the aroma of tea.
-        </li>
-        <li>
-          ✨ I’m a firm believer in the power of affirmations and start every
-          day with a positive mantra.
-        </li>
-      </ul>
+      <div class="fun-facts">
+        <h3>Fun Facts About Me 🌸</h3>
+        <ul>
+          <li>
+            ✨ My favorite tea is <strong>hibiscus</strong>, it's tangy,
+            refreshing, and always puts me in a good mood.
+          </li>
+          <li>
+            ✨ I'm a huge bookworm and always have a novel on my nightstand. Give
+            me a cozy blanket, a cup of tea, and a good book, and I'm in heaven.
+          </li>
+          <li>
+            ✨ I'm a homebody at heart. While some people love the outdoors, I
+            find my peace indoors, ALONE, surrounded by soft lighting, calming
+            music, and the aroma of tea.
+          </li>
+          <li>
+            ✨ I'm a firm believer in the power of affirmations and start every
+            day with a positive mantra.
+          </li>
+        </ul>
+      </div>
 
-      <p>
-        Let’s connect! Feel free to reach out through the
-        <a
-          href="contact.html"
-          style="color: #6b4226; text-decoration: underline"
-          >Contact</a
-        >
-        page or follow me on social media. I’d love to hear your story and share
-        a virtual cup of tea with you.
-      </p>
+      <div class="connect-section">
+        <p>
+          Let's connect! Feel free to reach out through the contact page or follow me on social media. 
+          I'd love to hear your story and share a virtual cup of tea with you.
+        </p>
+        <a href="contact.html" class="contact-link">Get In Touch</a>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer>
       <p>&copy; 2025 Tea & Thoughts | Sip. Reflect. Grow.</p>
     </footer>
+
+    <script>
+      // Mobile menu toggle
+      document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.getElementById('nav-menu').classList.toggle('show');
+      });
+      
+      // Add subtle animation to sections when they come into view
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+      
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, observerOptions);
+      
+      // Observe all sections
+      document.querySelectorAll('.about-section, .fun-facts, .connect-section').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(20px)';
+        section.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(section);
+      });
+    </script>
   </body>
 </html>
